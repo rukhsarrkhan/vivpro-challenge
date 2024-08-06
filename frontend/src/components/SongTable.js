@@ -69,7 +69,7 @@ const SongTable = ({ songs, onRateSong, onPageChange, currentPage, totalPages })
                                     onSort={handleSort}
                                 />
                             ))}
-                            <TableCell>Rating</TableCell>
+                            <TableCell>RATING</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
