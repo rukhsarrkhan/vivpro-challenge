@@ -5,12 +5,10 @@ import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import App from './App';
 
-// Mock the custom hook
 jest.mock('./hooks/useSongData', () => ({
   useSongData: jest.fn()
 }));
 
-// Mock the child components
 jest.mock('./components/SongTable', () => () => <div data-testid="song-table">Song Table</div>);
 jest.mock('./components/SearchBar', () => ({ onSearch }) => (
   <input data-testid="search-bar" onChange={(e) => onSearch(e.target.value)} />
@@ -19,7 +17,6 @@ jest.mock('./components/ScatterChart', () => () => <div data-testid="scatter-cha
 jest.mock('./components/HistogramChart', () => () => <div data-testid="histogram-chart">Histogram Chart</div>);
 jest.mock('./components/BarCharts', () => () => <div data-testid="bar-charts">Bar Charts</div>);
 
-// Mock MUI components
 jest.mock('@mui/material', () => ({
   ...jest.requireActual('@mui/material'),
   useMediaQuery: jest.fn(),
