@@ -2,3 +2,4 @@
 
 * Please open two terminal for backend and frontend respectively to run them.
 * Instructions are present in README.md of each section
+* Build and run backend first then frontend
